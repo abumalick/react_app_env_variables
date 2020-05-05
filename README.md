@@ -8,8 +8,15 @@ const TEST = process.env.TEST;
 
 All the environment variables that are passed to the app by webpack are included in the `main` chunk in `build/static/js` folder.
 
-```
-Object({NODE_ENV:"production",PUBLIC_URL:"",WDS_SOCKET_HOST:void 0,WDS_SOCKET_PATH:void 0,WDS_SOCKET_PORT:void 0,REACT_APP_TEST_ENV_VARIABLE:"This_is_visible_in_the_app"}).TEST
+```js
+Object({
+  NODE_ENV: "production",
+  PUBLIC_URL: "",
+  WDS_SOCKET_HOST: void 0,
+  WDS_SOCKET_PATH: void 0,
+  WDS_SOCKET_PORT: void 0,
+  REACT_APP_TEST_ENV_VARIABLE: "This_is_visible_in_the_app",
+}).TEST;
 ```
 
 Please note that env variables that are not prefixed by `REACT_APP_` are not included
