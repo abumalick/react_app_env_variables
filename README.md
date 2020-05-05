@@ -1,3 +1,19 @@
+# Demo: Shows that env variables starting with REACT*APP* will get bundled
+
+Because of this line in `App.js`
+
+```js
+const TEST = process.env.TEST;
+```
+
+All the environment variables are included in the main chunk in `build/static/js` folder
+
+```
+Object({NODE_ENV:"production",PUBLIC_URL:"",WDS_SOCKET_HOST:void 0,WDS_SOCKET_PATH:void 0,WDS_SOCKET_PORT:void 0,REACT_APP_TEST_ENV_VARIABLE:"This_is_visible_in_the_app"}).TEST
+```
+
+If you want to play around, make sure you remove `node_modules/.cache` folder. Env variables get somewhat cached between builds. (I included a `clean` script)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
