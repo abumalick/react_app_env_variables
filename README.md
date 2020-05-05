@@ -19,7 +19,7 @@ Object({
 }).TEST;
 ```
 
-Please note that env variables that are not prefixed by `REACT_APP_` are not included
+Please note that env variables that are not prefixed by `REACT_APP_` are not included (I have a `TEST_ENV_VARIABLE` env variable in my `.env` file)
 
 If you want to play around, make sure you remove `node_modules/.cache` folder. Env variables get somewhat cached between builds. (I included a `clean` script)
 
